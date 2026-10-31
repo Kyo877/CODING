@@ -17,16 +17,6 @@ Welcome to my official repository for all coding assignments, lab exercises, and
 
 ---
 
-## 📂 Directory Structure
-
-| Folder / File | Description |
-| :--- | :--- |
-| [`README.md`](./README.md) | Repository documentation & index |
-| [`C1_IncomeTax/`](./C1_IncomeTax) | C++ solution for C1_IncomeTax |
-| [`C2_average_pre-testloop/`](./C2_average_pre-testloop) | C++ solution for C2_average_pre-testloop |
-
----
-
 ## 💡 Purpose & Goals
 * Track daily coding progress and university lab submissions.
 * Build a solid foundation in C++ programming logic, control structures, and algorithms.
