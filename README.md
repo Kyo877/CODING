@@ -1,14 +1,19 @@
-# 📚 Fundamental Programming Concepts (2026/2027)
+# 🚀 Fundamental Programming Concepts (2026/2027)
 
-This repository contains all my coding assignments, labs, and exercises for **Degree Year 1 - Fundamental Programming Concepts**.
+> **Degree Year 1 | Universiti Teknologi Malaysia (UTM)**
+
+Welcome to my official repository for all coding assignments, lab exercises, and projects for **Fundamental Programming Concepts**.
 
 ---
 
-## 🛠️ About This Repository
-* **Course:** Fundamental Programming Concepts
-* **Academic Year:** 2026/2027
-* **Program:** Degree Year 1
-* **Language/Tools:** C++, VS Code, Git & GitHub
+## 📌 Repository Overview
+
+| Category | Details |
+| :--- | :--- |
+| **Course** | Fundamental Programming Concepts |
+| **Academic Year** | 2026/2027 |
+| **Primary Language** | C++ |
+| **Environment** | VS Code & Git / GitHub |
 
 ---
 
@@ -16,11 +21,16 @@ This repository contains all my coding assignments, labs, and exercises for **De
 
 | Folder / File | Description |
 | :--- | :--- |
-| `C1_IncomeTax/` | C++ solution for calculating income tax |
-| `C2_average_pre-testloop/` | C++ solution using a pre-test loop to calculate average |
-| `README.md` | Repository documentation |
+| [`README.md`](./README.md) | Repository documentation & index |
+| [`C1_IncomeTax/`](./C1_IncomeTax) | C++ solution for C1_IncomeTax |
+| [`C2_average_pre-testloop/`](./C2_average_pre-testloop) | C++ solution for C2_average_pre-testloop |
 
 ---
 
-## 🚀 Purpose
-To track my coding progress, complete university assignments, and build a strong foundation in programming concepts.
+## 💡 Purpose & Goals
+* Track daily coding progress and university lab submissions.
+* Build a solid foundation in C++ programming logic, control structures, and algorithms.
+* Maintain clean, well-documented source code using version control.
+
+---
+*Maintained by Wong Yan Kang*
