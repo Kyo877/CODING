@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Job Loop"/>
+        <attribute name="authors" value="teowz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-15 11:02:10 AM"/>
+        <attribute name="created" value="dGVvd3o7VFpRQVNVUzsyMDI2LTExLTA4OzEyOjE0OjE1IEFNOzI0MDM="/>
+        <attribute name="edited" value="dGVvd3o7VFpRQVNVUzsyMDI2LTExLTE1OzExOjAyOjEwIEFNOzE2OzI1NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pages, copies, money, count, totalmoney, highestbill, average" type="Integer" array="False" size=""/>
+            <declare name="mode" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="money" expression="0"/>
+            <assign variable="totalmoney" expression="0"/>
+            <assign variable="highestbill" expression="0"/>
+            <output expression="&quot;=================================================&quot;" newline="True"/>
+            <output expression="&quot;      &#55356;&#57119; WELCOME TO GROUP 7 PRINT SHOP &#55356;&#57119;       &quot;" newline="True"/>
+            <output expression="&quot;=================================================&quot;" newline="True"/>
+            <output expression="&quot;Pages (0 to stop) : &quot;" newline="True"/>
+            <input variable="pages"/>
+            <while expression="pages != 0">
+                <while expression="pages &lt; 0">
+                    <output expression="&quot;Please insert valid pages ! : &quot;" newline="True"/>
+                    <input variable="pages"/>
+                </while>
+                <if expression="pages == 0">
+                    <then/>
+                    <else>
+                        <output expression="&quot;Copies : &quot;" newline="True"/>
+                        <input variable="copies"/>
+                        <while expression="copies &lt; 1">
+                            <output expression="&quot;Copies must be 1 or more . Copies : &quot;" newline="True"/>
+                            <input variable="copies"/>
+                        </while>
+                        <output expression="&quot;Mode [b/c] : &quot;" newline="True"/>
+                        <input variable="mode"/>
+                        <while expression="mode != &quot;B&quot; and mode != &quot;b&quot; and mode != &quot;C&quot; and mode != &quot;c&quot;">
+                            <output expression="&quot;Mode must be b or c (b/c) : &quot;" newline="True"/>
+                            <input variable="mode"/>
+                        </while>
+                        <comment text="Calculate cost for one job&#13;&#10;(Refer to Cost Calculation Flowchart)"/>
+                        <output expression="&quot;cost : RM &quot; &amp; (money / 100.0)" newline="True"/>
+                        <assign variable="count" expression="count + 1"/>
+                        <assign variable="totalmoney" expression="totalmoney + money"/>
+                        <if expression="money &gt; highestbill">
+                            <then>
+                                <assign variable="highestbill" expression="money"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <output expression="&quot;Pages (0 for stop) : &quot;" newline="True"/>
+                        <input variable="pages"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;SUMMARY OF SCSE1013_ASSIGNMENT1_PRINTSHOP&quot;" newline="True"/>
+            <output expression="&quot;-----------------------------------------&quot;" newline="True"/>
+            <if expression="count &gt; 0">
+                <then>
+                    <assign variable="average" expression="totalmoney / count"/>
+                    <assign variable="average" expression="((average + 2) / 5) * 5"/>
+                    <output expression="&quot;total jobs  &#55357;&#56541;    : &quot; &amp; count" newline="True"/>
+                    <output expression="&quot;total sales &#55357;&#56501;    : RM &quot; &amp; (totalmoney / 100.0)" newline="True"/>
+                    <output expression="&quot;averange spend &#55357;&#56520; : RM &quot; &amp; (average / 100.0)" newline="True"/>
+                    <output expression="&quot;highest bill &#55356;&#57286;   : RM &quot; &amp; (highestbill / 100.0)" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No jobs today .&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;=================================================&quot;" newline="True"/>
+            <output expression="&quot; &#10024; THANK YOU FOR VISITING! PLEASE COME AGAIN! &#10024; &quot;" newline="True"/>
+            <output expression="&quot;=================================================&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

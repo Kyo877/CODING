@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Cost Calculation Flowchart (Assignment 1)"/>
+        <attribute name="authors" value="teowz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-12 05:57:56 PM"/>
+        <attribute name="created" value="dGVvd3o7VFpRQVNVUzsyMDI2LTExLTA3OzExOjM0OjI0IFBNOzI0MTg="/>
+        <attribute name="edited" value="dGVvd3o7VFpRQVNVUzsyMDI2LTExLTEyOzA1OjU3OjU2IFBNOzEzOzI1ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pages, copies, totalpages, money" type="Integer" array="False" size=""/>
+            <declare name="mode" type="String" array="False" size=""/>
+            <declare name="morethan200, morethan50, morethan0, colourextra40, mincharge100" type="Integer" array="False" size=""/>
+            <assign variable="morethan0" expression="10"/>
+            <assign variable="morethan50" expression="8"/>
+            <assign variable="morethan200" expression="6"/>
+            <assign variable="colourextra40" expression="40"/>
+            <assign variable="mincharge100" expression="100"/>
+            <comment text="pages, copies and mode are obtained from the Job Loop Flowchart"/>
+            <assign variable="totalpages" expression="pages * copies"/>
+            <if expression="totalpages &gt; 200">
+                <then>
+                    <assign variable="money" expression="totalpages * morethan200"/>
+                </then>
+                <else>
+                    <if expression="totalpages &gt; 50">
+                        <then>
+                            <assign variable="money" expression="totalpages * morethan50"/>
+                        </then>
+                        <else>
+                            <assign variable="money" expression="totalpages * morethan0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="mode == &quot;C&quot; or mode == &quot;c&quot;">
+                <then>
+                    <assign variable="money" expression="money + (totalpages * colourextra40)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="money &lt; mincharge100">
+                <then>
+                    <assign variable="money" expression="mincharge100"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="money" expression="((money + 2) / 5) * 5"/>
+        </body>
+    </function>
+</flowgorithm>
